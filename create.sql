@@ -1,0 +1,11 @@
+create table fruit_season (fruit_id bigint not null, saison varchar(255));
+create table fruits (price_per_kg numeric(38,2), id bigserial not null, nom varchar(255), origine varchar(255), quantite varchar(255), primary key (id));
+create table legume_season (legume_id bigint not null, saison varchar(255));
+create table legumes (price_per_kg numeric(38,2), id bigserial not null, nom varchar(255), origine varchar(255), quantite varchar(255), primary key (id));
+alter table if exists fruit_season add constraint FKit4jm3pyiygj07uwfhknx9ik3 foreign key (fruit_id) references fruits;
+alter table if exists legume_season add constraint FKfhhgwnqirt6h6nexrsjoh0970 foreign key (legume_id) references legumes;create table fruit_season (fruit_id bigint not null, saison varchar(255));
+create table fruits (price_per_kg numeric(38,2), id bigserial not null, nom varchar(255), origine varchar(255), quantite varchar(255), primary key (id));
+create table legume_season (legume_id bigint not null, saison varchar(255));
+create table legumes (price_per_kg numeric(38,2), id bigserial not null, nom varchar(255), origine varchar(255), quantite varchar(255), primary key (id));
+alter table if exists fruit_season add constraint FKit4jm3pyiygj07uwfhknx9ik3 foreign key (fruit_id) references fruits;
+alter table if exists legume_season add constraint FKfhhgwnqirt6h6nexrsjoh0970 foreign key (legume_id) references legumes;
